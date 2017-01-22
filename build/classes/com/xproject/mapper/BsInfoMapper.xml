@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.xproject.mapper.BsInfoMapper">
+	<resultMap type="aliasBsInfo" id="BsInfoResult">
+		<result property="id" column="id" />
+		<result property="frequency" column="frequency"/>
+		<result property="rssi" column="rssi" />
+		<result property="mcc" column="mcc"/>
+		<result property="mnc" column="mnc" />
+		<result property="la" column="la"/>
+		<result property="areas_id" column="areas_id"/>
+	</resultMap>
+	
+	
+	<select id="ListAll" resultMap="BsInfoResult">
+	    select * from bs_info 
+  	</select>
+
+</mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.xproject.mapper.AreaInfoMapper">
+	<resultMap type="aliasAreaInfo" id="AreaInfoResult">
+		<result property="left_up" column="left_up" />
+		<result property="left_down" column="left_down"/>
+		<result property="right_up" column="right_up" />
+		<result property="right_down" column="right_down"/>
+	</resultMap>
+	
+	
+	<select id="ListAll" resultMap="AreaInfoResult">
+	    select * from area_info 
+  	</select>
+
+</mapper>
